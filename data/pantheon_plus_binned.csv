@@ -1,0 +1,17 @@
+# Compact binned Pantheon+SH0ES distance-modulus anchor.
+# Source table: PantheonPlusSH0ES/DataRelease, Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat
+# URL: https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat
+# Construction: non-calibrator rows with 0.01 <= zHD <= 1.40, inverse-variance weighted by MU_SH0ES_ERR_DIAG.
+# This compact table is for visual/pedagogical anchoring only; it ignores the full Pantheon+ covariance matrix.
+z_min,z_max,z_mean,mu_mean,mu_err,n_supernovae
+0.01,0.03,0.02201,34.7451,0.0126,347
+0.03,0.05,0.03781,35.9987,0.0145,177
+0.05,0.08,0.06335,37.1466,0.0206,82
+0.08,0.12,0.10154,38.2455,0.0302,37
+0.12,0.18,0.15132,39.1511,0.0161,123
+0.18,0.28,0.22561,40.1226,0.0116,272
+0.28,0.40,0.33094,41.0854,0.0127,234
+0.40,0.55,0.46226,41.9198,0.0174,140
+0.55,0.75,0.63670,42.7341,0.0217,120
+0.75,1.00,0.79967,43.3228,0.0505,23
+1.00,1.40,1.22573,44.6326,0.0744,17

@@ -1,0 +1,32 @@
+name: Reproduce numerical outputs
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Verify retained data files
+        run: python scripts/download_pantheon_data.py --verify-only
+
+      - name: Run regression tests
+        run: pytest -q
+
+      - name: Regenerate figures and tables
+        run: python scripts/generate_cosmology_figures.py

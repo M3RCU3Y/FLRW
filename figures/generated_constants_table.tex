@@ -1,0 +1,12 @@
+\begin{tabularx}{\textwidth}{llX}
+\toprule
+Quantity & Value & Notes \\
+\midrule
+$H_0$ & 70.0 km s$^{-1}$ Mpc$^{-1}$ & reference value used in all baseline runs \\
+Baseline $(\Omega_r,\Omega_m,\Omega_\Lambda)$ & (9.0e-05, 0.300, 0.69991) & radiation-inclusive flat $\Lambda$CDM-like model \\
+$H_0^{-1}$ & 13.968 Gyr & Hubble time associated with the reference $H_0$ \\
+$c/H_0$ & 4.283 Gpc & Hubble distance associated with the reference $H_0$ \\
+ODE tolerances & rtol $=10^{-10}$, atol $=10^{-12}$ & DOP853 controls in solve\_ivp \\
+Quadrature tolerances & epsrel $=10^{-11}$ & adaptive scalar-integral checks \\
+\bottomrule
+\end{tabularx}

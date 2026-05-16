@@ -1,0 +1,14 @@
+# Data Directory
+
+This directory contains the small binned visual anchor and the official
+Pantheon+SH0ES source files needed for the covariance-aware likelihood.
+
+Run:
+
+```bash
+python scripts/download_pantheon_data.py --verify-only
+```
+
+to verify the retained source files by size and SHA-256 hash.
+
+See `docs/DATA_PROVENANCE.md` for source URLs, hashes, and the data boundary.

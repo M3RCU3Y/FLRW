@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or generated outputs, please cite this repository."
+title: "FLRW Numerical Simulation Code Release"
+authors:
+  - family-names: "Deonarine"
+    given-names: "Brandon"
+repository-code: "https://github.com/M3RCU3Y/FLRW"
+date-released: "2026-05-15"
+version: "0.1.0"
+abstract: "Reproducible background FLRW cosmology simulations, generated figures, tests, and a Pantheon+SH0ES covariance-aware shape-likelihood check."
+keywords:
+  - cosmology
+  - FLRW
+  - LambdaCDM
+  - Pantheon+
+  - reproducibility
+  - Python

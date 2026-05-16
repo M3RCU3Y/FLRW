@@ -1,0 +1,21 @@
+[project]
+name = "flrw-numerical-simulations"
+version = "0.1.0"
+description = "Reproducible FLRW background cosmology simulations, figures, tests, and Pantheon+SH0ES likelihood check."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Brandon Deonarine" }
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

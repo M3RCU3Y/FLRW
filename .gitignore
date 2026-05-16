@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local render/build scratch space
+tmp/
+build/
+build-tectonic/
+
+# Paper source intentionally excluded from this public code release
+main.tex
+main.pdf
+main.bbl
+references.bib
+FLAGSHIP_*.md
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
