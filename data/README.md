@@ -1,7 +1,9 @@
 # Data Directory
 
-This directory contains the small binned visual anchor and the official
-Pantheon+SH0ES source files needed for the covariance-aware likelihood.
+This directory contains the small binned visual anchor, the official
+Pantheon+SH0ES source files needed for the covariance-aware supernova
+likelihood, and the DESI DR2 compressed BAO means/covariance used for the
+standard-ruler consistency check.
 
 Run:
 

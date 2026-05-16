@@ -1,7 +1,7 @@
 [project]
 name = "flrw-numerical-simulations"
-version = "0.1.0"
-description = "Reproducible FLRW background cosmology simulations, figures, tests, and Pantheon+SH0ES likelihood check."
+version = "0.2.0"
+description = "Reproducible FLRW background cosmology simulations, figures, tests, Pantheon+SH0ES likelihood, and DESI DR2 BAO check."
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
@@ -10,7 +10,7 @@ authors = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["scripts"]
+pythonpath = ["src"]
 
 [tool.ruff]
 line-length = 120

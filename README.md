@@ -13,13 +13,16 @@ the figures, and reproduce the main numerical claims.
 
 ## What Is Included
 
-- `scripts/generate_cosmology_figures.py` generates all numerical figures and
-  LaTeX-ready result tables.
+- `src/flrw_paper/` contains the reusable simulation package, organized into
+  models, distances, datasets, likelihoods, plotting, and table utilities.
+- `scripts/generate_cosmology_figures.py` is a small orchestration script that
+  regenerates all numerical figures and LaTeX-ready result tables.
 - `scripts/download_pantheon_data.py` verifies or downloads the official
   Pantheon+SH0ES source files by size and SHA-256 hash.
 - `tests/test_cosmology_core.py` checks analytic limits, distance identities,
   Astropy agreement, convergence, and the Pantheon+ covariance likelihood.
-- `data/` contains the retained data inputs used by the simulations.
+- `data/` contains the retained Pantheon+SH0ES and DESI DR2 BAO data inputs used
+  by the simulations.
 - `figures/` contains regenerated vector figures and generated result tables.
 - `docs/` explains provenance, reproducibility, and result interpretation.
 
@@ -64,6 +67,20 @@ This is not a new cosmological measurement and not a calibrated H0 analysis. It
 is a reproducible demonstration that the FLRW distance pipeline can be coupled
 to modern public supernova covariance data.
 
+## DESI DR2 BAO Check
+
+The repository also includes a DESI-style compressed BAO comparison using
+`D_M/r_d`, `D_H/r_d`, and `D_V/r_d` with the retained DESI DR2 covariance data.
+For the baseline shape, profiling one global BAO scale nuisance gives
+
+```text
+alpha_BAO = 1.016
+chi2 = 10.39
+dof = 12
+```
+
+This is a standard-ruler consistency check, not a full BAO cosmological fit.
+
 ## Repository Layout
 
 ```text
@@ -72,6 +89,7 @@ to modern public supernova covariance data.
 |-- docs/
 |-- figures/
 |-- scripts/
+|-- src/flrw_paper/
 |-- tests/
 |-- requirements.txt
 |-- requirements-lock.txt

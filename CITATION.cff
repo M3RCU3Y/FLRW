@@ -6,12 +6,14 @@ authors:
     given-names: "Brandon"
 repository-code: "https://github.com/M3RCU3Y/FLRW"
 date-released: "2026-05-15"
-version: "0.1.0"
-abstract: "Reproducible background FLRW cosmology simulations, generated figures, tests, and a Pantheon+SH0ES covariance-aware shape-likelihood check."
+version: "0.2.0"
+abstract: "Reproducible background FLRW cosmology simulations, generated figures, tests, a Pantheon+SH0ES covariance-aware shape-likelihood check, and a DESI DR2 compressed-BAO consistency check."
 keywords:
   - cosmology
   - FLRW
   - LambdaCDM
   - Pantheon+
+  - DESI
+  - BAO
   - reproducibility
   - Python

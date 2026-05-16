@@ -50,12 +50,13 @@ The code computes background FLRW quantities:
 - density-era diagnostics,
 - Pantheon+SH0ES binned distance-modulus anchor,
 - Pantheon+SH0ES covariance-aware shape likelihood.
+- DESI DR2 compressed BAO consistency check.
 
 It does not compute perturbations, CMB spectra, galaxy clustering, weak
 lensing, or a full multi-probe cosmological parameter fit.
 
 ## Data Scope
 
-The Pantheon+SH0ES source table and covariance matrix are retained in `data/`
-for reproducibility. Their provenance and hashes are documented in
-`docs/DATA_PROVENANCE.md`.
+The Pantheon+SH0ES source table/covariance and DESI DR2 compressed BAO
+mean/covariance files are retained in `data/` for reproducibility. Their
+provenance and hashes are documented in `docs/DATA_PROVENANCE.md`.

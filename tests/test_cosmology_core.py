@@ -5,9 +5,9 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "src"))
 
-import generate_cosmology_figures as cosmo  # noqa: E402
+import flrw_paper as cosmo  # noqa: E402
 
 
 def test_analytic_ages_match_known_limits():
@@ -88,6 +88,28 @@ def test_pantheon_full_covariance_likelihood_matches_regression():
     assert 1300.0 < float(summary["chi2_min"]) < 1450.0
     assert float(summary["reduced_chi2"]) < 1.0
     assert float(summary["delta_chi2_baseline"]) > 2.0
+
+
+def test_desi_bao_dr2_profiled_scale_likelihood_matches_regression():
+    summary = cosmo.desi_bao_dr2_summary(ROOT)
+
+    assert int(summary["n_measurements"]) == 13
+    assert 1.0 < float(summary["alpha"]) < 1.04
+    assert 9.0 < float(summary["chi2_scaled"]) < 12.0
+    assert int(summary["dof_scaled"]) == 12
+    assert float(summary["chi2_scaled"]) < float(summary["chi2_fixed"])
+
+
+def test_bao_observable_predictions_are_positive_for_all_desi_points():
+    data = cosmo.load_desi_bao_dr2(ROOT)
+    model = cosmo.MODEL_BY_NAME["Flat_LCDM"]
+    predictions = [
+        cosmo.bao_prediction(model, float(z), str(quantity))
+        for z, quantity in zip(data["z"], data["quantity"])
+    ]
+
+    assert len(predictions) == 13
+    assert min(predictions) > 0.0
 
 
 def test_dense_grid_convergence_stays_below_reported_tolerance_scale():

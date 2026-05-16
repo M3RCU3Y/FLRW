@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download or verify the Pantheon+SH0ES source files used by the paper."""
+"""Download or verify the observational source files used by the paper."""
 
 from __future__ import annotations
 
@@ -41,6 +41,20 @@ FILES = [
         "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
         "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
         33284960,
+    ),
+    DataFile(
+        "DESI DR2 BAO compressed means",
+        "desi_dr2_bao_all_gccomb_mean.txt",
+        "https://raw.githubusercontent.com/CobayaSampler/bao_data/master/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+        "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+        472,
+    ),
+    DataFile(
+        "DESI DR2 BAO covariance",
+        "desi_dr2_bao_all_gccomb_cov.txt",
+        "https://raw.githubusercontent.com/CobayaSampler/bao_data/master/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+        "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+        2547,
     ),
 ]
 
