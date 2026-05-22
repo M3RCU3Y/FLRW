@@ -27,7 +27,7 @@ python scripts/generate_cosmology_figures.py
 Expected test result:
 
 ```text
-10 passed
+12 passed
 ```
 
 ## Generated Outputs
@@ -60,3 +60,5 @@ lensing, or a full multi-probe cosmological parameter fit.
 The Pantheon+SH0ES source table/covariance and DESI DR2 compressed BAO
 mean/covariance files are retained in `data/` for reproducibility. Their
 provenance and hashes are documented in `docs/DATA_PROVENANCE.md`.
+Upstream data-source citation and redistribution notes are summarized in
+`docs/DATA_LICENSES.md`.

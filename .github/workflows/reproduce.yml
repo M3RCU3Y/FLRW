@@ -30,3 +30,6 @@ jobs:
 
       - name: Regenerate figures and tables
         run: python scripts/generate_cosmology_figures.py
+
+      - name: Ensure regenerated tables are committed
+        run: git diff --exit-code -- 'figures/*.tex'

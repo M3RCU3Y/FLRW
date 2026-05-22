@@ -94,7 +94,8 @@ This is a standard-ruler consistency check, not a full BAO cosmological fit.
 |-- requirements.txt
 |-- requirements-lock.txt
 |-- pyproject.toml
-`-- CITATION.cff
+|-- CITATION.cff
+`-- LICENSE
 ```
 
 ## Reproducibility Standard
@@ -112,5 +113,9 @@ request.
 
 ## License
 
-No open-source license has been selected yet. Until a license is added, reuse is
-limited to what GitHub's terms and applicable law allow.
+The code in this release is distributed under the MIT License; see `LICENSE`.
+The retained Pantheon+SH0ES and DESI DR2-related BAO data files remain governed
+by their upstream public-release terms and should be cited through the original
+data products as well as this reproducibility release. Generated figures and
+tables may be reused with attribution to this repository and the underlying
+public data sources. See `docs/DATA_LICENSES.md` for the data-source boundary.
