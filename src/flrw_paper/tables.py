@@ -141,6 +141,12 @@ def tex_escape(text: str) -> str:
     return "".join(replacements.get(char, char) for char in text)
 
 
+def format_rel_diff(value: float) -> str:
+    if value < 1.0e-14:
+        return r"$<10^{-14}$"
+    return f"{value:.2e}"
+
+
 def write_data_manifest_table(root: Path, out: Path) -> None:
     entries = [
         (
@@ -315,8 +321,8 @@ def write_results_table(root: Path, out: Path) -> None:
     ]
     for row in astropy_crosscheck_summary():
         tex.append(
-            rf"{row['z']:.1f} & {row['lookback_rel']:.2e} & {row['dc_rel']:.2e} & "
-            rf"{row['dl_rel']:.2e} & {row['da_rel']:.2e} \\"
+            rf"{row['z']:.1f} & {format_rel_diff(row['lookback_rel'])} & {format_rel_diff(row['dc_rel'])} & "
+            rf"{format_rel_diff(row['dl_rel'])} & {format_rel_diff(row['da_rel'])} \\"
         )
     tex.extend([r"\bottomrule", r"\end{tabular}"])
     (out / "astropy_crosscheck_table.tex").write_text("\n".join(tex), encoding="utf-8")
