@@ -209,14 +209,17 @@ def write_results_table(root: Path, out: Path) -> None:
         rows.append((model.label, age, horizon, turn, fate_text(model)))
 
     tex = [
-        r"\begin{tabularx}{\textwidth}{lcc>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}",
+        r"\begingroup",
+        r"\small",
+        r"\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}cc>{\raggedright\arraybackslash}X@{}}",
         r"\toprule",
-        r"Model & Age at $a=1$ [Gyr] & $D_{\rm hor}(a=1)$ [Gpc] & Future marker & Qualitative fate \\",
+        r"Model & Age [Gyr] & $D_{\rm hor}$ [Gpc] & Fate or future marker \\",
         r"\midrule",
     ]
     for label, age, horizon, turn, fate in rows:
-        tex.append(rf"{label} & {age:.2f} & {horizon:.2f} & {turn} & {fate} \\")
-    tex.extend([r"\bottomrule", r"\end{tabularx}"])
+        future = fate if turn == "--" else rf"{fate}; {turn}"
+        tex.append(rf"{label} & {age:.2f} & {horizon:.2f} & {future} \\")
+    tex.extend([r"\bottomrule", r"\end{tabularx}", r"\endgroup"])
     (out / "results_summary_table.tex").write_text("\n".join(tex), encoding="utf-8")
 
     constants = [

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from pathlib import Path
 
 import matplotlib as mpl
@@ -64,10 +65,20 @@ mpl.rcParams.update({
     "ps.fonttype": 42,
 })
 
+PDF_METADATA = {
+    "Creator": "FLRW numerical simulation figure generator",
+    "Producer": "Matplotlib",
+    "CreationDate": datetime(2026, 5, 22, tzinfo=timezone.utc),
+    "ModDate": datetime(2026, 5, 22, tzinfo=timezone.utc),
+}
+
 def savefig(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    plt.savefig(path)
-    plt.close()
+    fig = plt.gcf()
+    for ax in fig.axes:
+        ax.set_title("")
+    fig.savefig(path, metadata=PDF_METADATA)
+    plt.close(fig)
 
 
 def finish_axis(ax: plt.Axes, legend: bool = True) -> None:

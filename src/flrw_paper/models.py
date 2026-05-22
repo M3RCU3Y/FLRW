@@ -153,11 +153,11 @@ def flat_lcdm_shape_model(omega_m: float, omega_r: float = BASELINE_OMEGA_R) -> 
 
 def fate_text(model: Model) -> str:
     if model.name == "Flat_LCDM":
-        return "accelerated expansion"
+        return "accelerating"
     if model.name == "Closed_matter":
-        return "finite turnaround and recollapse"
+        return "turnaround and recollapse"
     if model.name == "Open_matter":
-        return "eternal expansion; curvature-coasting limit"
+        return "curvature-coasting"
     if model.name == "Radiation":
-        return "eternal decelerating expansion"
-    return "eternal decelerating expansion"
+        return "decelerating"
+    return "decelerating"
