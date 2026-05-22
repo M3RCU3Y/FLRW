@@ -1,7 +1,7 @@
 # Reproducibility Guide
 
 This repository is designed so the numerical results can be regenerated without
-the manuscript source.
+the writeup source.
 
 ## Environment
 
@@ -9,6 +9,7 @@ Use Python 3.11 or newer. Install the runtime dependencies:
 
 ```bash
 python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 `requirements-lock.txt` records the exact package versions used in the local
