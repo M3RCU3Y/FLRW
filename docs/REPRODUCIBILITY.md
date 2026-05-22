@@ -35,7 +35,9 @@ Expected test result:
 The generation script writes vector PDF figures and generated LaTeX tables into
 `figures/`. The files are committed so the repository is useful immediately,
 but they are not hand-edited artifacts; they can be regenerated from the Python
-code.
+code. The CI workflow checks generated LaTeX tables by exact diff and verifies
+that PDF figures are rebuilt as non-empty files; exact binary PDF equality is
+not enforced because font and PDF-renderer metadata can vary across platforms.
 
 ## Numerical Scope
 

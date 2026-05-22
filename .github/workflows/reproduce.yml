@@ -31,5 +31,11 @@ jobs:
       - name: Regenerate figures and tables
         run: python scripts/generate_cosmology_figures.py
 
-      - name: Ensure regenerated outputs are committed
-        run: git diff --exit-code -- figures
+      - name: Ensure regenerated tables are committed
+        run: git diff --exit-code -- 'figures/*.tex'
+
+      - name: Ensure figure PDFs were regenerated
+        run: |
+          for file in figures/*.pdf; do
+            test -s "$file"
+          done

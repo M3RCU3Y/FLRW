@@ -1,6 +1,6 @@
 [project]
 name = "flrw-numerical-simulations"
-version = "0.2.3"
+version = "0.2.4"
 description = "Reproducible FLRW background cosmology simulations, figures, tests, Pantheon+SH0ES likelihood, and DESI DR2 BAO check."
 readme = "README.md"
 requires-python = ">=3.11"
