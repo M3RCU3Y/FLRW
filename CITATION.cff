@@ -5,8 +5,8 @@ authors:
   - family-names: "Deonarine"
     given-names: "Brandon"
 repository-code: "https://github.com/M3RCU3Y/FLRW"
-date-released: "2026-05-22"
-version: "0.2.4"
+date-released: "2026-05-23"
+version: "0.2.5"
 license: "MIT"
 abstract: "Reproducible background FLRW cosmology simulations, generated figures, tests, a Pantheon+SH0ES covariance-aware shape-likelihood check, and a DESI DR2 compressed-BAO consistency check."
 keywords:

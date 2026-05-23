@@ -41,12 +41,13 @@ QUAD_EPSREL = 1.0e-11
 # can remain visually consistent across all generated figures.
 PALETTE = {
     "EdS": "#24476b",
-    "Radiation": "#6a4c93",
-    "Flat_LCDM": "#cc5a1a",
-    "Open_matter": "#2a8f86",
-    "Closed_matter": "#7d2d2d",
-    "Grid": "#aebfd0",
+    "Radiation": "#6f4a8e",
+    "Flat_LCDM": "#d65f1f",
+    "Open_matter": "#178f87",
+    "Closed_matter": "#8a2f3d",
+    "Grid": "#c8d3df",
     "Ink": "#1d2733",
+    "Paper": "#fbfcfe",
 }
 
 LINE_STYLES = {

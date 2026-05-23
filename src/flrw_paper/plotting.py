@@ -47,7 +47,7 @@ mpl.rcParams.update({
     "font.serif": ["Latin Modern Roman", "Computer Modern Roman", "CMU Serif", "DejaVu Serif"],
     "mathtext.fontset": "cm",
     "font.size": 10.8,
-    "axes.titlesize": 12.8,
+    "axes.titlesize": 12.4,
     "axes.labelsize": 11.4,
     "axes.titleweight": "semibold",
     "legend.fontsize": 8.8,
@@ -55,9 +55,17 @@ mpl.rcParams.update({
     "ytick.labelsize": 9.6,
     "axes.spines.top": False,
     "axes.spines.right": False,
+    "axes.edgecolor": PALETTE["Ink"],
+    "axes.labelcolor": PALETTE["Ink"],
     "axes.grid": True,
-    "grid.alpha": 0.24,
-    "grid.linewidth": 0.55,
+    "grid.color": PALETTE["Grid"],
+    "grid.alpha": 0.38,
+    "grid.linewidth": 0.45,
+    "legend.framealpha": 0.92,
+    "legend.facecolor": "#ffffff",
+    "legend.edgecolor": "#c9d0d8",
+    "figure.facecolor": "#ffffff",
+    "axes.facecolor": PALETTE["Paper"],
     "figure.dpi": 160,
     "savefig.dpi": 320,
     "savefig.bbox": "tight",
@@ -77,17 +85,22 @@ def savefig(path: Path) -> None:
     fig = plt.gcf()
     for ax in fig.axes:
         ax.set_title("")
+        ax.tick_params(colors=PALETTE["Ink"])
+        for spine in ax.spines.values():
+            spine.set_color(PALETTE["Ink"])
     fig.savefig(path, metadata=PDF_METADATA)
     plt.close(fig)
 
 
 def finish_axis(ax: plt.Axes, legend: bool = True) -> None:
     ax.tick_params(direction="out", length=4, width=0.8)
+    ax.grid(True, color=PALETTE["Grid"], alpha=0.38, linewidth=0.45)
+    ax.set_axisbelow(True)
     if legend:
-        leg = ax.legend(frameon=True, fancybox=False, edgecolor="0.75")
+        leg = ax.legend(frameon=True, fancybox=False, edgecolor="#c9d0d8", facecolor="#ffffff")
         if leg is not None:
             leg.get_frame().set_linewidth(0.6)
-            leg.get_frame().set_alpha(0.95)
+            leg.get_frame().set_alpha(0.92)
 
 
 def fig_flrw_diagram(out: Path) -> None:
