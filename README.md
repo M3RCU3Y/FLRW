@@ -13,10 +13,10 @@ The paper text is not included here. This repository is only the public
 technical release: code, tests, retained public data files, generated figures,
 and enough documentation for someone else to rerun the numerical work.
 
-Current release: `v0.2.6`. This release keeps the repository focused on
-reproducibility assets: source code, retained public data, generated
-figures/tables, tests, and documentation. Manuscript source files are not
-included.
+Current release: [`v0.2.7`](https://github.com/M3RCU3Y/FLRW/releases/tag/v0.2.7).
+This release keeps the repository focused on reproducibility assets: source
+code, retained public data, generated figures/tables, tests, and documentation.
+Manuscript source files are not included.
 
 <p align="center">
   <img src="docs/assets/expansion-diagram.png" alt="Conceptual FLRW expansion diagram" width="82%">
@@ -139,7 +139,8 @@ python scripts\generate_cosmology_figures.py
 |   `-- tables.py               generated table writers
 |-- scripts/
 |   |-- download_pantheon_data.py
-|   `-- generate_cosmology_figures.py
+|   |-- generate_cosmology_figures.py
+|   `-- render_readme_assets.py
 |-- tests/
 |   `-- test_cosmology_core.py
 |-- data/                       retained public data inputs
@@ -217,7 +218,8 @@ Regenerating them should be done through:
 python scripts/generate_cosmology_figures.py
 ```
 
-The README preview images can be refreshed from the vector PDFs with:
+The README preview images can be refreshed from the vector PDFs with Poppler's
+`pdftoppm` available on PATH:
 
 ```bash
 python scripts/render_readme_assets.py

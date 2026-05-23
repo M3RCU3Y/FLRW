@@ -52,7 +52,7 @@ The code computes background FLRW quantities:
 - particle horizon,
 - density-era diagnostics,
 - Pantheon+SH0ES binned distance-modulus anchor,
-- Pantheon+SH0ES covariance-aware shape likelihood.
+- Pantheon+SH0ES covariance-aware shape likelihood,
 - DESI DR2 compressed BAO consistency check.
 
 It does not compute perturbations, CMB spectra, galaxy clustering, weak

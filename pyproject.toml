@@ -1,6 +1,6 @@
 [project]
 name = "flrw-numerical-simulations"
-version = "0.2.6"
+version = "0.2.7"
 description = "Reproducible FLRW background cosmology simulations, figures, tests, Pantheon+SH0ES likelihood, and DESI DR2 BAO check."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -8,6 +8,20 @@ license = { file = "LICENSE" }
 authors = [
   { name = "Brandon Deonarine" }
 ]
+keywords = ["cosmology", "FLRW", "LambdaCDM", "Pantheon+", "DESI", "BAO", "reproducibility"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+[project.urls]
+Repository = "https://github.com/M3RCU3Y/FLRW"
+Release = "https://github.com/M3RCU3Y/FLRW/releases/tag/v0.2.7"
+Issues = "https://github.com/M3RCU3Y/FLRW/issues"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
