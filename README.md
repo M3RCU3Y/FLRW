@@ -13,9 +13,10 @@ The paper text is not included here. This repository is only the public
 technical release: code, tests, retained public data files, generated figures,
 and enough documentation for someone else to rerun the numerical work.
 
-Current local release-candidate metadata: `v0.2.5`. This patch refreshes the
-generated figure styling and GitHub preview assets without adding manuscript
-source files.
+Current release: `v0.2.6`. This release keeps the repository focused on
+reproducibility assets: source code, retained public data, generated
+figures/tables, tests, and documentation. Manuscript source files are not
+included.
 
 <p align="center">
   <img src="docs/assets/expansion-diagram.png" alt="Conceptual FLRW expansion diagram" width="82%">

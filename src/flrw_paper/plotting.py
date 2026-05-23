@@ -22,7 +22,11 @@ from .distances import (
     time_integrand_a,
     transverse_distance_from_dc,
 )
-from .likelihoods import desi_bao_dr2_summary, pantheon_full_fit_summary, pantheon_residual_summary
+from .likelihoods import (
+    desi_bao_dr2_summary,
+    pantheon_full_fit_summary,
+    pantheon_residual_summary,
+)
 from .models import (
     A_MIN,
     BASELINE_OMEGA_L,
@@ -80,6 +84,7 @@ PDF_METADATA = {
     "ModDate": datetime(2026, 5, 22, tzinfo=timezone.utc),
 }
 
+
 def savefig(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fig = plt.gcf()
@@ -97,7 +102,12 @@ def finish_axis(ax: plt.Axes, legend: bool = True) -> None:
     ax.grid(True, color=PALETTE["Grid"], alpha=0.38, linewidth=0.45)
     ax.set_axisbelow(True)
     if legend:
-        leg = ax.legend(frameon=True, fancybox=False, edgecolor="#c9d0d8", facecolor="#ffffff")
+        leg = ax.legend(
+            frameon=True,
+            fancybox=False,
+            edgecolor="#c9d0d8",
+            facecolor="#ffffff",
+        )
         if leg is not None:
             leg.get_frame().set_linewidth(0.6)
             leg.get_frame().set_alpha(0.92)
